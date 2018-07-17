@@ -1,14 +1,24 @@
 <?php 
 
-class Pages {
+class Pages extends Controller{
     
 
     public function __construct(){
         
     }
+    
+    public function index(){
+        $data = [
+            'title'=>'Welcom'
+        ];
 
-    public function about($id) {
-        echo $id;
+        $this->view('pages/index',$data );
+    }
+    public function about(){
+        $data = [
+            'title'=>'About Us'
+        ];
+       $this->view('pages/about', $data);
     }
     
 }
